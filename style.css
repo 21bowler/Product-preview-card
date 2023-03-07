@@ -1,0 +1,130 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(30, 38%, 92%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container { 
+    margin: 30px auto;
+    padding: 0px 30px;
+}
+
+.grid {
+    max-width: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 18px;
+    overflow: hidden;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+}
+
+.image img {
+    max-width: 100%;
+    display: inherit;
+    border: 18px;
+}
+
+h2 {
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+h6, p {
+    font-family: 'Montserrat', sans-serif;
+    color: hsl(228, 12%, 48%);
+    font-size: 14px;
+    line-height: 1.5rem;
+    font-weight: 500;
+}
+
+h6 {
+    letter-spacing: 3px;
+}
+
+.prices {
+    display: flex;
+    align-items: center;
+
+}
+
+.big-price {
+    font-family: 'Fraunces', serif;
+    color:hsl(158, 36%, 37%);
+    font-size: 32px;
+    margin-right: 25px;
+}
+
+.btn {
+    font-family: 'Fraunces', serif;
+    color:hsl(0, 0%, 100%);
+    background-color: hsl(158, 36%, 37%);
+    font-size: 14px;
+    font-weight: 500;
+    border-style: none;
+    height: 45px;
+    border-radius: 10px;
+    width: 240px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: hsl(212, 21%, 14%);
+}
+
+.icon {
+    margin-right: 10px;
+}
+
+.credit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.credit a {
+    text-decoration: none;
+}
+
+
+/* mobile view */
+
+
+@media screen and (max-width: 628px) { 
+    .grid {        
+        grid-template-columns: 1fr;
+    }
+    .content {
+        padding: 20px;
+    }
+    .container {
+        padding: 0px 15px;
+    }
+    .image img {
+        width: 100%;
+        max-height: 450px;
+        object-fit: cover;
+    }
+    .btn {
+        width: 100%;
+    }
+    h2, h6, p, .price {
+       padding-bottom: 23px;
+    }
+}
